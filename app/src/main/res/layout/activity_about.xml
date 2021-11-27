@@ -152,12 +152,22 @@
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <ImageView
-                android:layout_width="150dp"
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:contentDescription="@string/made_with_love"
-                android:src="@drawable/made_with_love" />
+                android:drawableStart="@drawable/googleg_standard_color_18"
+                android:drawablePadding="10dp"
+                android:text="Modified By ChenShaobin"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#F44336"
+                android:textStyle="bold|italic" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button" />
 
         </LinearLayout>
     </ScrollView>
