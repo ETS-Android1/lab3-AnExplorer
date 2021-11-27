@@ -85,12 +85,14 @@ public class AboutActivity extends AboutVariantFlavour implements View.OnClickLi
 		TextView action_share = (TextView)findViewById(R.id.action_share);
 		TextView action_feedback = (TextView)findViewById(R.id.action_feedback);
 		TextView action_sponsor = (TextView)findViewById(R.id.action_sponsor);
+		TextView about_return_button = (TextView)findViewById(R.id.about_return_button);
 
 		action_rate.setOnClickListener(this);
 		action_support.setOnClickListener(this);
 		action_share.setOnClickListener(this);
 		action_feedback.setOnClickListener(this);
 		action_sponsor.setOnClickListener(this);
+		about_return_button.setOnClickListener(this);
 
 		if(Utils.isOtherBuild()){
 			action_rate.setVisibility(View.GONE);
@@ -115,6 +117,9 @@ public class AboutActivity extends AboutVariantFlavour implements View.OnClickLi
 	@Override
 	public void onClick(View view) {
 		switch (view.getId()) {
+			case R.id.about_return_button:
+				finish();
+				break;
 			case R.id.action_feedback:
 				openFeedback(this);
 				break;
